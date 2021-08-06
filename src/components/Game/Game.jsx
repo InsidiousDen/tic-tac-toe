@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { calculateWinner } from '../../helpers/helpers';
 import Board from '../Board/Board';
 import styles from './Game.module.css'
-import { xPlayer, oPlayer, score, start } from '../../constants/values'
+import { xPlayer, oPlayer, score, start, changeName } from '../../constants/values'
 import Modal from '../Modal/Modal';
 
 const Game = () => {
@@ -78,7 +78,7 @@ const Game = () => {
             <div>{oName} : {oScore}</div>
           </div>
           <div className={styles.score}>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? xPlayer : oPlayer)}</div>
-          <button className={styles.button} onClick={() => setModalActive(true)}>Change Name</button>
+          <button className={styles.button} onClick={() => setModalActive(true)}>{changeName}</button>
           <button className={styles.button} onClick={gameOver}>{start}</button>
         </div>
       </div>

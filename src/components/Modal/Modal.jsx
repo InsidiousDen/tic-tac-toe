@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form/Form";
 import './Modal.css'
-import { xPlayer, oPlayer } from "../../constants/values";
+import { xPlayer, oPlayer, changeName } from "../../constants/values";
 
 const Modal = ({ active, setActive, handleXName, handleOName }) => {
   return (
@@ -15,7 +15,7 @@ const Modal = ({ active, setActive, handleXName, handleOName }) => {
           onChange={handleOName}
           placeholder={oPlayer}
         ></Form>
-        <button className={'button'} onClick={() => setActive(false)}>Change Name</button>
+        <button className={'button'} onClick={() => setActive(false)}>{changeName}</button>
       </div>
     </div>
   );
