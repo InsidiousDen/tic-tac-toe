@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 50px;
+  width: 100%;
+}
+
+.input {
+  margin-bottom: 15px;
+  padding: 5px;
+  outline-color: #a855c1;
+}
+
